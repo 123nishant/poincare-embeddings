@@ -6,6 +6,15 @@
 # LICENSE file in the root directory of this source tree.
 #
 
+# Synset : Set of synonyms of the words  ( https://www.nltk.org/howto/wordnet.html ) 
+# Hyponyms : Contains specific substitutes aka Synonyms 
+# Hypernyms : Contain absrtact substitution aka Synonyms
+
+# Closure : Transitive Closuress ( Def : Given a directed graph, find out if a vertex j is 
+#                                 reachable from another vertex i for all vertex pairs (i, j) in the given graph.
+#                                 Here reachable mean that there is a path from vertex i to j.  )
+#   
+
 import re
 import pandas
 from nltk.corpus import wordnet as wn
