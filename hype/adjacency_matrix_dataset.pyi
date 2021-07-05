@@ -1,4 +1,9 @@
 
+# Typing introduced in Python version 3.9
+# Check https://docs.python.org/3/library/typing.html
+
+# Here used to create a tuple
+
 
 import torch
 from typing import Tuple
