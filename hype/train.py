@@ -8,7 +8,7 @@
 import torch as th
 import numpy as np
 import timeit
-import gc
+import gc  # Garbage Collector
 from tqdm import tqdm
 from torch.utils import data as torch_data
 
@@ -20,7 +20,7 @@ def train(
         model,
         data,
         optimizer,
-        opt,
+        opt,  # All the arguments . Refer embed.py
         log,
         rank=1,
         queue=None,
