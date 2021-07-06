@@ -46,6 +46,9 @@ class DistanceEnergyFunction(EnergyFunction):
     def loss(self, inp, target, **kwargs):
         return F.cross_entropy(inp.neg(), target)
 
+# Entailment one is pretty important for establishing hierarchy
+# As per latest paper : Inferring Concept Hierarchies in Hyperbolic Space
+# They use Energy function to establish concept hierarchies
 
 class EntailmentConeEnergyFunction(EnergyFunction):
     def __init__(self, *args, margin=0.1, **kwargs):
