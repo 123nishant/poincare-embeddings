@@ -14,12 +14,12 @@ from torch.utils.data import Dataset as DS
 from sklearn.metrics import average_precision_score
 from multiprocessing.pool import ThreadPool
 from functools import partial
-import h5py
+import h5py # Pythonic interface to hdf5. Created as a Cython wrapper on hdf5
 from tqdm import tqdm
 from fvcore.common.file_io import PathManager
 
 
-def load_adjacency_matrix(path, format='hdf5', symmetrize=False, objects=None):
+def load_adjacency_matrix(path, format='hdf5', symmetrize=False, objects=None): # hdf5 : Format to organize and store large amounts of data ( Easily manipulate data using NumPy )
     if format == 'hdf5':
         with PathManager.open(path, 'rb') as fin:
             with h5py.File(fin, 'r') as hf:
