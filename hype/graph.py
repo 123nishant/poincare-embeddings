@@ -76,7 +76,7 @@ def load_adjacency_matrix(path, format='hdf5', symmetrize=False, objects=None):
 
 
 def load_edge_list(path, symmetrize=False):
-    df = pandas.read_csv(path, usecols=['id1', 'id2', 'weight'], engine='c')
+    df = pandas.read_csv(path, usecols=['id1', 'id2', 'weight'], engine='c') # Engine : CSV is parsed using 'C' . Hence its fast
     df.dropna(inplace=True)
     if symmetrize:
         rev = df.copy().rename(columns={'id1' : 'id2', 'id2' : 'id1'})
