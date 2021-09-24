@@ -176,7 +176,7 @@ def main():
     train._lr_multiplier = opt.burnin_multiplier
 
     # Build config string for log
-    log.info(f'json_conf: {json.dumps(vars(opt))}')
+    log.info(f'json_conf: {json.dumps(vars(opt))}')     # Dumps the config in json format
 
     if opt.lr_type == 'scale':
         opt.lr = opt.lr * opt.batchsize
